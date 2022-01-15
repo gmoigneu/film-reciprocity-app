@@ -58,6 +58,67 @@ let kodakportra400 = Film(
     }
 )
 
+let kodaktrix = Film(
+    id: UUID().uuidString,
+    manufacturer: "Kodak",
+    name: "Tri-X",
+    iso: 400,
+    description: """
+    The Tri-X 400 formula is taken from Retro Pixel.
+    """,
+    source: "https://retro-pixel.com/film-reciprocity-tables/",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.54), precision: .tenths) : time
+    }
+)
+
+let kodaktmax100 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Kodak",
+    name: "T-Max 100",
+    iso: 100,
+    description: """
+    The T-Max 100 formula is taken from Retro Pixel.
+    """,
+    source: "https://retro-pixel.com/film-reciprocity-tables/",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.15), precision: .tenths) : time
+    }
+)
+
+let kodaktmax400 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Kodak",
+    name: "T-Max 400",
+    iso: 400,
+    description: """
+    The T-Max 400 formula is taken from Retro Pixel.
+    """,
+    source: "https://retro-pixel.com/film-reciprocity-tables/",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.24), precision: .tenths) : time
+    }
+)
+
+let kodakektar100 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Kodak",
+    name: "Ektar 100",
+    iso: 100,
+    description: """
+    The Ektar 100 formula is taken from a forum thread.
+    """,
+    source: "https://www.largeformatphotography.info/forum/archive/index.php/t-39588.html",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(0.759 * Double(time) + 0.555 * pow(Double(time), 1.3), precision: .tenths) : time
+    }
+)
+
+
 let cinestill50d = Film(
     id: UUID().uuidString,
     manufacturer: "CineStill",
@@ -238,11 +299,60 @@ let ilfordk400 = Film(
     }
 )
 
+let fujivelvia50 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Fuji",
+    name: "Velvia 50",
+    iso: 50,
+    description: """
+    The Fuji Velvia formula is taken from a forum thread.
+    """,
+    source: "https://www.largeformatphotography.info/forum/archive/index.php/t-39588.html",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 4.0 ? preciseRound(-0.9718 + 1.088 * pow(Double(time), 1.10), precision: .tenths) : time
+    }
+)
+
+let fujiproviardp2 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Fuji",
+    name: "Provia RDP II",
+    iso: 50,
+    description: """
+    The Fuji Provia RDP II formula is taken from a forum thread.
+    """,
+    source: "https://www.largeformatphotography.info/forum/archive/index.php/t-39588.html",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 16.0 ? preciseRound(0.6046 * pow(Double(time), 1.25), precision: .tenths) : time
+    }
+)
+
+let fujiprovia100f = Film(
+    id: UUID().uuidString,
+    manufacturer: "Fuji",
+    name: "Provia 100F",
+    iso: 50,
+    description: """
+    The Fuji Provia 100F formula is taken from a forum thread.
+    """,
+    source: "https://www.largeformatphotography.info/forum/archive/index.php/t-39588.html",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 16.0 ? preciseRound(Double(time) + (pow(7.629 * pow(10, -7) * Double(time), 3)), precision: .tenths) : time
+    }
+)
+
 let films = [
     cinestill50d,
     cinestill800t,
+    kodakektar100,
     kodakportra160,
     kodakportra400,
+    kodaktrix,
+    kodaktmax100,
+    kodaktmax400,
     ilfordfp4,
     ilfordhp5,
     ilfordsfx,
@@ -253,4 +363,7 @@ let films = [
     ilforddelta100,
     ilforddelta400,
     ilforddelta3200,
+    fujivelvia50,
+    fujiproviardp2,
+    fujiprovia100f,
 ]

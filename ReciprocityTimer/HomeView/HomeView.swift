@@ -53,6 +53,7 @@ struct HomeView: View {
                                 .foregroundColor(.white)
                                 .padding(10)
                                 .multilineTextAlignment(.center)
+                                .keyboardType(.decimalPad)
                         }.frame(height: 80)
                         .cornerRadius(8)
                         .font(.system(size: 32))
@@ -106,7 +107,7 @@ struct HomeView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        print("clicked")
+
                         vm.showSettings = true
                     } label: {
                         Image(systemName: "questionmark.circle.fill")
@@ -118,7 +119,6 @@ struct HomeView: View {
 
         }
         .sheet(isPresented: $vm.showSettings, onDismiss: {
-            print("Dismissed")
             vm.showSettings = false
         }) {
             SettingsView(showSettings: $vm.showSettings)
