@@ -34,7 +34,7 @@ let kodakportra160 = Film(
     name: "Portra 160",
     iso: 160,
     description: """
-    The Portra 160 formula is taken from a Flick discussion.
+    The Portra 160 formula is taken from a Flickr discussion.
     """,
     source: "https://www.flickr.com/groups/477426@N23/discuss/72157635197694957/",
     hasFormula: true,
@@ -49,7 +49,7 @@ let kodakportra400 = Film(
     name: "Portra 400",
     iso: 400,
     description: """
-    The Portra 400 formula is taken from a Flick discussion.
+    The Portra 400 formula is taken from a Flickr discussion.
     """,
     source: "https://www.flickr.com/groups/477426@N23/discuss/72157635197694957/",
     hasFormula: true,
@@ -60,11 +60,11 @@ let kodakportra400 = Film(
 
 let cinestill50d = Film(
     id: UUID().uuidString,
-    manufacturer: "Cinestill",
+    manufacturer: "CineStill",
     name: "50d",
     iso: 800,
     description: """
-    The Cinestill 50d formula is taken from the Cinestill FAQ
+    The CineStill 50d formula is taken from the CineStill FAQ
     """,
     source: "https://help.cinestillfilm.com/hc/en-us/articles/4407453578893-What-are-the-reciprocity-failure-details-for-CineStill-films-",
     hasFormula: true,
@@ -75,11 +75,11 @@ let cinestill50d = Film(
 
 let cinestill800t = Film(
     id: UUID().uuidString,
-    manufacturer: "Cinestill",
+    manufacturer: "CineStill",
     name: "800t",
     iso: 800,
     description: """
-    The Cinestill 800t formula is taken from the Cinestill FAQ
+    The CineStill 800t formula is taken from the CineStill FAQ
     """,
     source: "https://help.cinestillfilm.com/hc/en-us/articles/4407453578893-What-are-the-reciprocity-failure-details-for-CineStill-films-",
     hasFormula: true,

@@ -19,7 +19,6 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Reciprocity Timer").font(.title)
                 Spacer()
                 
                 Text("Selected film").font(.headline)
@@ -75,7 +74,7 @@ struct HomeView: View {
                         .cornerRadius(8)
                         .font(.system(size: 32))
                     }
-                }
+                }.padding(.horizontal, 40)
                 
                 Spacer()
                 
@@ -86,6 +85,7 @@ struct HomeView: View {
                             Link(destination: URL(string: vm.selectedFilm!.source!)!) {
                                 Text("View source")
                             }.padding(.top, 20)
+                            .padding(.horizontal, 10)
                         }
                     }
                     
@@ -99,9 +99,31 @@ struct HomeView: View {
                     selectedFilm: $vm.selectedFilm
                 )
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("Film Reciprocity").font(.headline)
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("clicked")
+                        vm.showSettings = true
+                    } label: {
+                        Image(systemName: "questionmark.circle.fill")
+                            .foregroundColor(Color.lightGray)
+                    }
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+
+        }
+        .sheet(isPresented: $vm.showSettings, onDismiss: {
+            print("Dismissed")
+            vm.showSettings = false
+        }) {
+            SettingsView(showSettings: $vm.showSettings)
         }
         .edgesIgnoringSafeArea(.all)
-        .padding(.horizontal, 40)
         .preferredColorScheme(.dark)
     }
 }

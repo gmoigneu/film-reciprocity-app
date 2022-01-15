@@ -17,6 +17,7 @@
 		2488D67C27911453004CA2A5 /* FilmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2488D67B27911453004CA2A5 /* FilmData.swift */; };
 		2488D67E2791145F004CA2A5 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2488D67D2791145F004CA2A5 /* Film.swift */; };
 		24CD95E62792230C00E0AEA2 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD95E52792230C00E0AEA2 /* Helpers.swift */; };
+		24CD95ED279249B700E0AEA2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD95EC279249B700E0AEA2 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2488D67B27911453004CA2A5 /* FilmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmData.swift; sourceTree = "<group>"; };
 		2488D67D2791145F004CA2A5 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		24CD95E52792230C00E0AEA2 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		24CD95EC279249B700E0AEA2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,6 @@
 		2488D66027911431004CA2A5 = {
 			isa = PBXGroup;
 			children = (
-				24CD95E52792230C00E0AEA2 /* Helpers.swift */,
 				2488D66B27911431004CA2A5 /* ReciprocityTimer */,
 				2488D66A27911431004CA2A5 /* Products */,
 			);
@@ -65,15 +66,17 @@
 		2488D66B27911431004CA2A5 /* ReciprocityTimer */ = {
 			isa = PBXGroup;
 			children = (
-				24CD95E72792434300E0AEA2 /* HomeView */,
-				244DBCF62791BD0400E47D84 /* Info.plist */,
+				24CD95E92792499900E0AEA2 /* SettingsView */,
 				2488D67F27911475004CA2A5 /* Models */,
 				2488D67A27911445004CA2A5 /* Data */,
+				24CD95E72792434300E0AEA2 /* HomeView */,
+				24CD95E82792467A00E0AEA2 /* FilmSelectionView */,
+				24CD95E52792230C00E0AEA2 /* Helpers.swift */,
+				244E4C632791E4F000906B54 /* Colors.swift */,
 				2488D66C27911431004CA2A5 /* ReciprocityTimerApp.swift */,
+				244DBCF62791BD0400E47D84 /* Info.plist */,
 				2488D67027911431004CA2A5 /* Assets.xcassets */,
 				2488D67227911431004CA2A5 /* Preview Content */,
-				244DBCF42791B6AE00E47D84 /* FilmSelectionView.swift */,
-				244E4C632791E4F000906B54 /* Colors.swift */,
 			);
 			path = ReciprocityTimer;
 			sourceTree = "<group>";
@@ -109,6 +112,22 @@
 				244E4C652791E75500906B54 /* HomeViewModel.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		24CD95E82792467A00E0AEA2 /* FilmSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				244DBCF42791B6AE00E47D84 /* FilmSelectionView.swift */,
+			);
+			path = FilmSelectionView;
+			sourceTree = "<group>";
+		};
+		24CD95E92792499900E0AEA2 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				24CD95EC279249B700E0AEA2 /* SettingsView.swift */,
+			);
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +203,7 @@
 				244E4C662791E75500906B54 /* HomeViewModel.swift in Sources */,
 				2488D66F27911431004CA2A5 /* HomeView.swift in Sources */,
 				244DBCF52791B6AE00E47D84 /* FilmSelectionView.swift in Sources */,
+				24CD95ED279249B700E0AEA2 /* SettingsView.swift in Sources */,
 				2488D67E2791145F004CA2A5 /* Film.swift in Sources */,
 				24CD95E62792230C00E0AEA2 /* Helpers.swift in Sources */,
 				244E4C642791E4F000906B54 /* Colors.swift in Sources */,
@@ -316,8 +336,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Guillaume Moigneu (GWL4T4GA92)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReciprocityTimer/Preview Content\"";
 				DEVELOPMENT_TEAM = GWL4T4GA92;
@@ -338,7 +358,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.nls.FilmReciprocity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Reciprocity Testing";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -350,8 +370,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Guillaume Moigneu (GWL4T4GA92)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReciprocityTimer/Preview Content\"";
 				DEVELOPMENT_TEAM = GWL4T4GA92;
@@ -372,7 +392,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.nls.FilmReciprocity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Reciprocity Testing";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

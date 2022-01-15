@@ -23,6 +23,8 @@ class HomeViewModel: ObservableObject {
     }
     @Published var exposureResult : String = ""
     
+    @Published var showSettings : Bool = false
+    
     init() {
         
     }
