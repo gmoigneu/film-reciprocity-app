@@ -5,9 +5,26 @@
 iOS app to calculate film reprocity failure timings
 
 
-## Support films
+## Supported films
 
+* Kodak Ektar 100
 * Kodak Portra 160
 * Kodak Portra 400
+* Kodak Tri-X
+* Kodak T-Max 100
+* Kodak T-Max 400
+* Ilford FP4
+* Ilford HP5+
+* Ilford SFX
+* Ilford XP2
+* Ilford Kentmere 100
+* Ilford Kentmere 400
+* Ilford Pan-F
+* Ilford Delta 100
+* Ilford Delta 400
+* Ilford Delta 3200
+* Fuji Velvia 50
+* Fuji Provia RDP II
+* Fuji Prova 100f
 * CineStill 50d
 * CineStill 800t
