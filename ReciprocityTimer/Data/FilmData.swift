@@ -88,10 +88,169 @@ let cinestill800t = Film(
     }
 )
 
+let ilfordsfx = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "SFX",
+    iso: 200,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.43), precision: .tenths) : time
+    }
+)
+
+let ilfordpanf = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "Pan F+",
+    iso: 50,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.33), precision: .tenths) : time
+    }
+)
+
+let ilforddelta100 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "Delta 100",
+    iso: 100,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.26), precision: .tenths) : time
+    }
+)
+
+let ilforddelta400 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "Delta 400",
+    iso: 400,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.41), precision: .tenths) : time
+    }
+)
+
+let ilforddelta3200 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "Delta 3200",
+    iso: 3200,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.33), precision: .tenths) : time
+    }
+)
+
+let ilfordfp4 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "FP4+",
+    iso: 126,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.26), precision: .tenths) : time
+    }
+)
+
+let ilfordhp5 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "HP5+",
+    iso: 400,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.31), precision: .tenths) : time
+    }
+)
+
+let ilfordxp2 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "XP2",
+    iso: 400,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.31), precision: .tenths) : time
+    }
+)
+
+let ilfordk100 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "Kentmere 100",
+    iso: 100,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.26), precision: .tenths) : time
+    }
+)
+
+let ilfordk400 = Film(
+    id: UUID().uuidString,
+    manufacturer: "Ilford",
+    name: "Kentmere 400",
+    iso: 400,
+    description: """
+    The Ilford formula is taken from their official data sheet.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.30), precision: .tenths) : time
+    }
+)
+
 let films = [
     cinestill50d,
     cinestill800t,
     kodakportra160,
     kodakportra400,
-    
+    ilfordfp4,
+    ilfordhp5,
+    ilfordsfx,
+    ilfordxp2,
+    ilfordk100,
+    ilfordk400,
+    ilfordpanf,
+    ilforddelta100,
+    ilforddelta400,
+    ilforddelta3200,
 ]
