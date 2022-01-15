@@ -69,7 +69,7 @@ struct SettingsView: View {
                  .frame(height: 1)
                  .background(Color.darkGray)
                 
-                Link(destination: URL(string: "https://raw.githubusercontent.com/gmoigneu/film-reciprocity-app/main/PRIVACY.md")!) {
+                Link(destination: URL(string: "https://github.com/gmoigneu/film-reciprocity-app/blob/main/PRIVACY.md")!) {
                     HStack {
                         Text("Privacy policy")
                         Spacer()
@@ -82,7 +82,7 @@ struct SettingsView: View {
                  .frame(height: 1)
                  .background(Color.darkGray)
                 
-                Link(destination: URL(string: "https://raw.githubusercontent.com/gmoigneu/film-reciprocity-app/main/TERMS.md")!) {
+                Link(destination: URL(string: "https://github.com/gmoigneu/film-reciprocity-app/blob/main/TERMS.md")!) {
                     HStack {
                         Text("Terms and conditions")
                         Spacer()
