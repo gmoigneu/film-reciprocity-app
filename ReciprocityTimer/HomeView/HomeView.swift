@@ -40,6 +40,10 @@ struct HomeView: View {
                 .frame(height: 50)
                 .cornerRadius(8)
                 
+                if(vm.selectedFilm != nil) {
+                    Text("\(vm.selectedFilm!.iso) iso").font(.caption)
+                }
+                
                 
                 Spacer()
                 

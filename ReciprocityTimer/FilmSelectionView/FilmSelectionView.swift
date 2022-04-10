@@ -52,11 +52,15 @@ struct FilmSelectionView: View {
 //                }
                 Section() {
                     ForEach(vm.filmsList) { film in
-                        Text("\(film.manufacturer) \(film.name)")
-                            .onTapGesture {
-                                selectedFilm = film
-                                showFilmSelection = false
-                            }
+                        HStack() {
+                            Text("\(film.manufacturer) \(film.name)")
+                            Spacer()
+                            Text("\(film.iso) iso").font(.system(size: 12))
+                            
+                        }.onTapGesture {
+                            selectedFilm = film
+                            showFilmSelection = false
+                        }
                     }
                 }
             }
