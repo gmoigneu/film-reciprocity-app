@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240EFCAC280315A300FEE201 /* FilmSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240EFCAB280315A300FEE201 /* FilmSelectionViewModel.swift */; };
 		244DBCF52791B6AE00E47D84 /* FilmSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244DBCF42791B6AE00E47D84 /* FilmSelectionView.swift */; };
 		244E4C642791E4F000906B54 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E4C632791E4F000906B54 /* Colors.swift */; };
 		244E4C662791E75500906B54 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E4C652791E75500906B54 /* HomeViewModel.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240EFCAB280315A300FEE201 /* FilmSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSelectionViewModel.swift; sourceTree = "<group>"; };
 		244DBCF42791B6AE00E47D84 /* FilmSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSelectionView.swift; sourceTree = "<group>"; };
 		244DBCF62791BD0400E47D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		244E4C632791E4F000906B54 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				244DBCF42791B6AE00E47D84 /* FilmSelectionView.swift */,
+				240EFCAB280315A300FEE201 /* FilmSelectionViewModel.swift */,
 			);
 			path = FilmSelectionView;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				2488D67E2791145F004CA2A5 /* Film.swift in Sources */,
 				24CD95E62792230C00E0AEA2 /* Helpers.swift in Sources */,
 				244E4C642791E4F000906B54 /* Colors.swift in Sources */,
+				240EFCAC280315A300FEE201 /* FilmSelectionViewModel.swift in Sources */,
 				2488D66D27911431004CA2A5 /* ReciprocityTimerApp.swift in Sources */,
 				2488D67C27911453004CA2A5 /* FilmData.swift in Sources */,
 			);
@@ -338,7 +342,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ReciprocityTimer/Preview Content\"";
 				DEVELOPMENT_TEAM = GWL4T4GA92;
 				ENABLE_PREVIEWS = YES;
@@ -355,7 +359,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.nls.FilmReciprocity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -372,7 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ReciprocityTimer/Preview Content\"";
 				DEVELOPMENT_TEAM = GWL4T4GA92;
 				ENABLE_PREVIEWS = YES;
@@ -389,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.nls.FilmReciprocity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

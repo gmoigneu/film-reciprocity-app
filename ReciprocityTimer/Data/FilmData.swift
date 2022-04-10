@@ -123,7 +123,7 @@ let cinestill50d = Film(
     id: UUID().uuidString,
     manufacturer: "CineStill",
     name: "50d",
-    iso: 800,
+    iso: 50,
     description: """
     The CineStill 50d formula is taken from the CineStill FAQ
     """,
