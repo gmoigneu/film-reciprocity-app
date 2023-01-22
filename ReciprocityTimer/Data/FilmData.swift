@@ -134,6 +134,21 @@ let cinestill50d = Film(
     }
 )
 
+let cinestill400d = Film(
+    id: UUID().uuidString,
+    manufacturer: "CineStill",
+    name: "400d",
+    iso: 400,
+    description: """
+    The CineStill 400d formula is taken from the CineStill FAQ
+    """,
+    source: "https://help.cinestillfilm.com/hc/en-us/articles/4407453578893-What-are-the-reciprocity-failure-details-for-CineStill-films-",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.3), precision: .tenths) : time
+    }
+)
+
 let cinestill800t = Film(
     id: UUID().uuidString,
     manufacturer: "CineStill",
@@ -346,6 +361,7 @@ let fujiprovia100f = Film(
 
 let films = [
     cinestill50d,
+    cinestill400d,
     cinestill800t,
     kodakektar100,
     kodakportra160,
