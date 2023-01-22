@@ -27,4 +27,6 @@ iOS app to calculate film reprocity failure timings
 * Fuji Provia RDP II
 * Fuji Prova 100f
 * CineStill 50d
+* CineStill 400d
 * CineStill 800t
+* CatLABS X FILM 80
