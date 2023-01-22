@@ -359,6 +359,21 @@ let fujiprovia100f = Film(
     }
 )
 
+let catlabsxfilm80 = Film(
+    id: UUID().uuidString,
+    manufacturer: "CatLABS",
+    name: "X FILM 80",
+    iso: 80,
+    description: """
+    CatLABS does not publish reciprocity data, but a review suggested FP4+ as a starting point, according to CatLABS support.
+    """,
+    source: "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Reciprocity-Failure-Compensation.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.26), precision: .tenths) : time
+    }
+)
+
 let films = [
     cinestill50d,
     cinestill400d,
@@ -382,4 +397,5 @@ let films = [
     fujivelvia50,
     fujiproviardp2,
     fujiprovia100f,
+    catlabsxfilm80,
 ]
