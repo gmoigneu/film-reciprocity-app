@@ -305,12 +305,26 @@ let fujivelvia50 = Film(
     name: "Velvia 50",
     iso: 50,
     description: """
-    The Fuji Velvia formula is taken from a forum thread.
+    The Fuji Velvia formula is taken from the official Fuji documentation.
     """,
-    source: "https://www.largeformatphotography.info/forum/archive/index.php/t-39588.html",
+    source: "https://asset.fujifilm.com/master/emea/files/2020-10/a71dda63e2662f012b3b74110794918a/films_velvia-50_datasheet_01.pdf",
     hasFormula: true,
     formula: {(time: Double) in
-        return time >= 4.0 ? preciseRound(-0.9718 + 1.088 * pow(Double(time), 1.10), precision: .tenths) : time
+            if(time >= 40) {
+                let result = (time * 2.35) - 6
+                return preciseRound(result, precision: .tenths)
+            }
+            
+            if(time >= 8) {
+                let result = (time * 2.25) - 6
+                return preciseRound(result, precision: .tenths)
+            }
+            
+            if(time >= 4) {
+                return preciseRound(time * 4/3, precision: .tenths)
+            }
+            
+            return time
     }
 )
 
@@ -344,6 +358,21 @@ let fujiprovia100f = Film(
     }
 )
 
+let kodaktechnicalpan = Film(
+    id: UUID().uuidString,
+    manufacturer: "Kodak",
+    name: "Technical Pan",
+    iso: 25,
+    description: """
+    Taken from Kodak technical sheet.
+    """,
+    source: "https://web.archive.org/web/20160615035248/http://www.kodak.com/global/en/professional/support/techPubs/p255/p255.pdf",
+    hasFormula: true,
+    formula: {(time: Double) in
+        return time >= 1.0 ? preciseRound(pow(Double(time), 1.33), precision: .tenths) : time
+    }
+)
+
 let films = [
     cinestill50d,
     cinestill800t,
@@ -353,6 +382,7 @@ let films = [
     kodaktrix,
     kodaktmax100,
     kodaktmax400,
+    kodaktechnicalpan,
     ilfordfp4,
     ilfordhp5,
     ilfordsfx,
